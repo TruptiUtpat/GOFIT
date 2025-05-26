@@ -1,0 +1,260 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "sendmail": [
+    {
+      "name": "",
+      "email": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 6
+    }
+  ],
+  "login": [
+    {
+      "eid": 452,
+      "eName": "klhlkj",
+      "email": "fhjghj",
+      "salary": 50000,
+      "role": "data scientist",
+      "doj": "2023-09-20T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "eid": 45,
+      "eName": "frg",
+      "email": "gttrh",
+      "salary": 56,
+      "role": "data scientist",
+      "doj": "2023-09-28T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "eid": 42,
+      "eName": "dsknvfjk",
+      "email": "flhdghyjl.",
+      "salary": 2343547,
+      "role": "software developer",
+      "doj": "2023-12-09T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "eid": 5664,
+      "eName": "nbhjgv",
+      "email": "bjgnb",
+      "salary": 50000,
+      "role": "software developer",
+      "doj": "2023-09-06T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "frg",
+      "eName": 345,
+      "email": "shraddhautpat6@gmail.com",
+      "salary": 34,
+      "role": "",
+      "doj": 255,
+      "id": 5
+    },
+    {
+      "name": "trupti",
+      "eName": 62132165453,
+      "email": "trupti@gmail.com",
+      "salary": 19,
+      "role": "",
+      "doj": 55,
+      "id": 6
+    },
+    {
+      "name": "gtygukg",
+      "eName": 4224,
+      "email": "gygui",
+      "salary": 5343,
+      "role": "",
+      "doj": 322,
+      "id": 7
+    },
+    {
+      "name": "trupti",
+      "eName": 54654654,
+      "email": "truptiutpat@gmail.com",
+      "salary": 20,
+      "role": "",
+      "doj": 60,
+      "id": 8
+    },
+    {
+      "name": "Anushka",
+      "eName": 765765786,
+      "email": "anushkakothare@gmail.com",
+      "salary": 20,
+      "role": "",
+      "doj": 55,
+      "id": 9
+    },
+    {
+      "name": "thdh",
+      "eName": 65654,
+      "email": "truptiutpat@gmail.com",
+      "salary": 20,
+      "role": "",
+      "doj": 60,
+      "id": 10
+    },
+    {
+      "name": "trupti",
+      "eName": 6545454845,
+      "email": "truptiutpat@gmail.com",
+      "salary": 20,
+      "role": "",
+      "doj": 60,
+      "id": 11
+    },
+    {
+      "name": "vhjvh",
+      "eName": 324242,
+      "email": "ghjkhnb",
+      "salary": 20,
+      "role": "",
+      "doj": 555,
+      "id": 12
+    },
+    {
+      "name": "fgjh",
+      "eName": 4534,
+      "email": "hjghjgk",
+      "salary": 20,
+      "role": "",
+      "doj": 55,
+      "id": 13
+    },
+    {
+      "name": "gfgh",
+      "eName": 33221231,
+      "email": "sdxcfcgzs",
+      "salary": 22,
+      "role": "",
+      "doj": 22,
+      "id": 14
+    },
+    {
+      "name": "trupti",
+      "eName": 654656876465,
+      "email": "truptiutpat@gmail.com",
+      "salary": 22,
+      "role": "",
+      "doj": 55,
+      "id": 15
+    },
+    {
+      "name": "trupti",
+      "contact": 902139634,
+      "email": "truptiutpat@gmail.com",
+      "age": 22,
+      "gender": "Female",
+      "weight": 65,
+      "id": 16
+    },
+    {
+      "name": "trupti",
+      "contact": 9021329634,
+      "email": "truptiutpat@gmail.com",
+      "age": 22,
+      "gender": "Female",
+      "weight": 65,
+      "id": 17
+    },
+    {
+      "name": "trupti",
+      "contact": 9021329634,
+      "email": "truptiutpat@gmail.com",
+      "age": 21,
+      "gender": "Female",
+      "weight": 65,
+      "id": 18
+    },
+    {
+      "name": "Trupti",
+      "contact": 9021329634,
+      "email": "truptiutpat@gmail.com",
+      "age": 22,
+      "gender": "Female",
+      "weight": 65,
+      "id": 19
+    },
+    {
+      "name": "naina",
+      "contact": 7788996644,
+      "email": "naina@gmail.com",
+      "age": 22,
+      "gender": "Female",
+      "weight": 87,
+      "id": 20
+    },
+    {
+      "name": "shraddha",
+      "contact": 9284146448,
+      "email": "shraddhautpat6@gmail.com",
+      "age": 19,
+      "gender": "Female",
+      "weight": 62,
+      "id": 21
+    },
+    {
+      "name": "isha",
+      "contact": 5688974626,
+      "email": "isha@gmail.com",
+      "age": 20,
+      "gender": "Female",
+      "weight": 63,
+      "id": 22
+    },
+    {
+      "name": "shraddha",
+      "contact": 9284943906,
+      "email": "shraddhautpat6@gmail.com",
+      "age": 20,
+      "gender": "Female",
+      "weight": 60,
+      "id": 23
+    }
+  ]
+}

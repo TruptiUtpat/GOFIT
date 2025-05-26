@@ -1,0 +1,81 @@
+<mat-card class="register-card">
+  <div mat-dialog-title>
+    <h3>Register Here</h3>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="addRec()">
+    <mat-card-content>
+      <div class="form-horizontal">
+
+        <!-- Full Name -->
+        <div class="form-group horizontal-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input type="text" matInput placeholder="Full Name" formControlName="name" required>
+            <mat-error *ngIf="form.get('name')?.hasError('minlength')">Name must be at least 4 characters long.</mat-error>
+            <mat-error *ngIf="form.get('name')?.hasError('required')">Name is <strong>required</strong>.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Contact No -->
+        <div class="form-group horizontal-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Contact No</mat-label>
+            <mat-icon matPrefix>phone</mat-icon>
+            <input type="number" matInput placeholder="Contact No" formControlName="contact" required autocomplete="off">
+            <mat-error *ngIf="form.get('contact')?.hasError('required')">Contact number is required.</mat-error>
+            <mat-error *ngIf="form.get('contact')?.hasError('pattern')">Please enter a valid contact number.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- User Email -->
+        <div class="form-group horizontal-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <mat-icon matPrefix>email</mat-icon>
+            <input type="email" matInput placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="form.get('email')?.hasError('email')">Please enter a valid email address.</mat-error>
+            <mat-error *ngIf="form.get('email')?.hasError('required')">Email is <strong>required</strong>.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group horizontal-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Age</mat-label>
+            <input type="number" matInput placeholder="Age" formControlName="age" required>
+            <mat-error *ngIf="form.get('age')?.hasError('required')">Age is <strong>required</strong>.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group horizontal-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender" required>
+              <mat-option value="" disabled>Select Gender</mat-option>
+              <mat-option *ngFor="let gender of genders" [value]="gender">{{ gender }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('gender')?.hasError('required')">Gender is <strong>required</strong>.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Weight -->
+        <div class="form-group horizontal-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Weight</mat-label>
+            <input type="number" matInput placeholder="Weight" formControlName="weight" required>
+            <mat-error *ngIf="form.get('weight')?.hasError('required')">Weight is <strong>required</strong>.</mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions class="action-buttons">
+      <button mat-button color="warn" [mat-dialog-close]="false">Cancel</button>
+      <button mat-raised-button color="primary" type="submit" >
+        {{ buttonText || 'Register' }}
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

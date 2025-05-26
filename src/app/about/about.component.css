@@ -1,0 +1,93 @@
+/* Set up the main container to cover the full height */
+#container-background {
+    height: 100vh; /* Full viewport height */
+    background-image: url('/assets/workbg.avif'); /* Replace with your actual background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    filter: brightness(0.6); /* Dim the background to make text more readable */
+  }
+  
+  /* Navbar styles */
+  #navbar-color {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #000000; /* Hover effect for nav links */
+    transition: color 0.3s;
+  }
+  
+  /* About Card Styling */
+  .about-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Card with a semi-transparent dark background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-card:hover {
+    transform: translateY(-10px); /* Hover effect for the card */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Links Section */
+  .contact-links {
+    margin-top: 30px;
+  }
+  
+  .social-link {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+  }
+  h3{
+    font-size: x-large;
+  }
+  .social-link:hover {
+    color: #f1c40f; /* Hover effect for social links */
+    text-decoration: underline;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  

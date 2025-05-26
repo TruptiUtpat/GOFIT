@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans</title>
+    <link rel="stylesheet" href="page.component.css">
+</head>
+<body>
+    <header>
+        <h1>Our Membership Plans</h1>
+        <p>Choose the best plan that fits your fitness goals!</p>
+    </header>
+    
+    <section class="plans">
+        <div class="plan">
+            <h2>Basic Plan</h2>
+            <p class="price">$29.99 / month</p>
+            <ul>
+                <li>Access to gym facilities</li>
+                <li>Free locker usage</li>
+                <li>One personal training session</li>
+                <li>Access to group classes</li>
+            </ul>
+            <!-- <button>Join Now</button> -->
+        </div>
+
+        <div class="plan">
+            <h2>Premium Plan</h2>
+            <p class="price">$49.99 / month</p>
+            <ul>
+                <li>Everything in Basic Plan</li>
+                <li>Unlimited personal training sessions</li>
+                <li>Free nutrition consultation</li>
+                <li>Priority booking for classes</li>
+            </ul>
+            <!-- <button >Join Now</button> -->
+        </div>
+
+        <div class="plan">
+            <h2>Elite Plan</h2>
+            <p class="price">$79.99 / month</p>
+            <ul>
+                <li>All Premium Plan benefits</li>
+                <li>VIP lounge access</li>
+                <li>Free merchandise</li>
+                <li>24/7 access to gym facilities</li>
+            </ul>
+            <!-- <button>Join Now</button> -->
+        </div>
+        
+    </section>
+    <button class = "joinus" mat-raised-button (click)="openForm()">Join Now</button>
+    <footer>
+      
+        <p>Contact us for corporate membership rates and discounts!</p>
+        <p>Email: contact@yourgym.com | Phone: (123) 456-7890</p>
+    </footer>
+</body>
+</html>

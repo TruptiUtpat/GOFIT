@@ -7,6 +7,9 @@ const app = express();
 // Middleware
 app.use(cors()); // To allow requests from Angular frontend
 app.use(bodyParser.json()); // To parse incoming JSON data
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 // Simple route to test the server
 app.get('/', (req, res) => {
@@ -24,6 +27,7 @@ app.post('/register', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
  // You can change this if needed
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on ${PORT}`);
 });
+

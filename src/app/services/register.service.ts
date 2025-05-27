@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
 
-  private apiUrl = 'http://localhost:3000/register'; // Backend API URL
+  private apiUrl = `${environment.apiUrl}/register`;
 
   constructor(private httpClient: HttpClient) { }
 
-  // Function to send registration data to the backend
   registerUser(data: any): Observable<any> {
     return this.httpClient.post(this.apiUrl, data);
   }

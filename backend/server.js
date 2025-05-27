@@ -50,6 +50,9 @@ app.post('/sendmail', (req, res) => {
 
   res.status(200).json({ message: 'Email sent successfully (mocked)' });
 });
+app.get('/', (req, res) => {
+  res.send('Welcome to GoFit Backend!');
+});
 
 // Start server
 app.listen(PORT, () => {

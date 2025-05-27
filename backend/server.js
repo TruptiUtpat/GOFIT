@@ -25,5 +25,5 @@ app.post('/register', (req, res) => {
 const PORT = process.env.PORT || 3000;
  // You can change this if needed
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${PORT}`);
 });

@@ -1,33 +1,57 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const fs = require('fs');
 const app = express();
 
+const PORT = 3000;
+const USERS_FILE = 'users.json';
+
 // Middleware
-app.use(cors()); // To allow requests from Angular frontend
-app.use(bodyParser.json()); // To parse incoming JSON data
-app.get('/health', (req, res) => {
-  res.status(200).send('OK');
-});
+app.use(cors());
+app.use(express.json());
 
-// Simple route to test the server
-app.get('/', (req, res) => {
-  res.send('Backend is running!');
-});
+// Initialize users file if not present
+if (!fs.existsSync(USERS_FILE)) {
+  fs.writeFileSync(USERS_FILE, JSON.stringify([], null, 2));
+}
 
-// Route for handling registration form submission
-app.post('/register', (req, res) => {
-  const { name, email, contact, age, gender, weight } = req.body;
+// POST /login - Register a new user
+app.post('/login', (req, res) => {
+  const newUser = req.body;
+
+  // Basic validation
+  if (!newUser.name || !newUser.email) {
+    return res.status(400).json({ error: 'Name and email are required.' });
+  }
+
+  // Read existing users
+  const users = JSON.parse(fs.readFileSync(USERS_FILE, 'utf-8'));
   
-  // Here, we just return the data as a response.
-  // In a real application, you'd store this in a database.
-  res.status(200).json({ message: 'User registered successfully', data: req.body });
+  // Generate unique ID
+  newUser.id = users.length > 0 ? users[users.length - 1].id + 1 : 1;
+
+  // Save new user
+  users.push(newUser);
+  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+
+  res.status(200).json({ message: 'User registered successfully', user: newUser });
 });
 
-const PORT = process.env.PORT || 3000;
- // You can change this if needed
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on ${PORT}`);
+// POST /sendmail - Placeholder route
+app.post('/sendmail', (req, res) => {
+  const { name, email } = req.body;
+
+  if (!name || !email) {
+    return res.status(400).json({ error: 'Name and email are required to send mail.' });
+  }
+
+  // Placeholder logic
+  console.log(`Pretending to send email to ${name} at ${email}...`);
+
+  res.status(200).json({ message: 'Email sent successfully (mocked)' });
 });
 
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

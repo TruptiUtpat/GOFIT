@@ -58,3 +58,30 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+console.log('Server initialized.');
+console.log(`Users file: ${USERS_FILE}`);
+console.log(`Server listening on port: ${PORT}`);
+
+// ...
+
+app.post('/login', (req, res) => {
+  console.log('New user registration attempt.');
+  const newUser = req.body;
+
+  // ...
+
+  console.log(`User registered successfully: ${newUser.name} (${newUser.email})`);
+  res.status(200).json({ message: 'User registered successfully', user: newUser });
+});
+
+// ...
+
+app.post('/sendmail', (req, res) => {
+  console.log('Email sending attempt.');
+  const { name, email } = req.body;
+
+  // ...
+
+  console.log(`Email sent successfully (mocked) to ${name} at ${email}.`);
+  res.status(200).json({ message: 'Email sent successfully (mocked)' });
+});
